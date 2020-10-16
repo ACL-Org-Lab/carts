@@ -1,19 +1,6 @@
-@Library('dynatrace@master')
 @Library('keptn-library@master')
 import sh.keptn.Keptn
 def keptn = new sh.keptn.Keptn()
-
-def tagMatchRules = [
-  [
-    meTypes: [
-      [meType: 'SERVICE']
-    ],
-    tags : [
-      [context: 'CONTEXTLESS', key: 'app', value: KEPTN_SERVICE],
-      [context: 'CONTEXTLESS', key: 'environment', value: KEPTN_STAGE]
-    ]
-  ]
-]
 
 pipeline {
   agent {
@@ -111,7 +98,7 @@ pipeline {
           }
         }
         script {
-          def keptnContext = keptn.sendStartEvaluationEvent starttime:"", endtime:"" 
+          def keptnContext = keptn.sendStartEvaluationEvent starttime:"", endtime:""
           echo "Open Keptns Bridge: ${keptn_bridge}/trace/${keptnContext}"
         }
       } 
@@ -125,6 +112,5 @@ pipeline {
         }
       }
     } // end stage
-
   } // end stages
 } // end pipeline
