@@ -24,6 +24,8 @@ pipeline {
     KEPTN_SLI = "${KEPTN_DIR}${KEPTN_SERVICE}-sli.yaml"
     KEPTN_SLO = "${KEPTN_DIR}${KEPTN_SERVICE}-slo.yaml"
     KEPTN_DT_CONF = "${KEPTN_DIR}${KEPTN_MONITORING}.conf.yaml"
+    KEPTN_ENDPOINT = credentials('keptn-endpoint')
+    KEPTN_API_TOKEN = credentials('keptn-api-token')
   }
 
   stages {
