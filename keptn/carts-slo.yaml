@@ -8,7 +8,7 @@
   objectives:
     - sli: "response_time_p95"
       key_sli: false
-      pass:             # pass if (relative change <= 10% AND absolute value is < 800ms)
+      pass:             # pass if (relative change <= 10% AND absolute value is < 200ms)
         - criteria:
             - "<=+10%"  # relative values require a prefixed sign (plus or minus)
             - "<200"    # absolute values only require a logical operator
