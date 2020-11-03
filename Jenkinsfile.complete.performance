@@ -9,7 +9,7 @@ pipeline {
   }
 
   parameters {
-    string(name: 'KEPTN_PROJECT', defaultValue: 'sockshop-perf', description: 'The name of the application.', trim: true)
+    string(name: 'KEPTN_PROJECT', defaultValue: 'acl-sockshop', description: 'The name of the application.', trim: true)
     string(name: 'KEPTN_SERVICE', defaultValue: 'carts', description: 'The name of the service', trim: true)
     string(name: 'KEPTN_STAGE', defaultValue: 'dev', description: 'The name of the environment.', trim: true)
     string(name: 'KEPTN_MONITORING', defaultValue: 'dynatrace', description: 'Name of monitoring provider.', trim: true)
